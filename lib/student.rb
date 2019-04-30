@@ -28,13 +28,11 @@ class Student
     DB[:conn].execute(sql)
   end 
   def update 
+    sql = <<-SQL
+    UPDATE students SET name = ?, grade = ? WHERE id = ?
+    SQL 
     
-    sql =<<-SQL
-    UPDATE students SET name = ?, grade = ? WHERE id = 
     DB[:conn].execute(sql, self.name, self.grade, self.id)
-    
-
-    
   end 
   
   def self.new_from_db(row)
