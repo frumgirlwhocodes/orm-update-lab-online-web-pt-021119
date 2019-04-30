@@ -27,6 +27,10 @@ class Student
     SQL
     DB[:conn].execute(sql)
   end 
+  def update 
+    
+    
+  end 
   
   def self.new_from_db(row)
     student=Student.new(row[1], row[2], row[0])
