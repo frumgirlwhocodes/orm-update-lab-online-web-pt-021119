@@ -35,6 +35,8 @@ class Student
     student.grade=row[2]
     student
   end
+  def self.create 
+    
   
   def save
     sql = <<-SQL
