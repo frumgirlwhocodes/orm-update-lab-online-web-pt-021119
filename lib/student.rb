@@ -29,6 +29,7 @@ class Student
   end 
   
   def self.new_from_db(row)
+    studemt
     
   def save
     sql = <<-SQL
