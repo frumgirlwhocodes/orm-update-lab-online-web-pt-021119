@@ -58,5 +58,6 @@ class Student
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
   end
 end 
-
+def self.find_by_name(name)
+  
 end
